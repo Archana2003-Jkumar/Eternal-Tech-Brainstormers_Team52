@@ -116,7 +116,7 @@ flowchart LR
 
 ---
 
-## **Executed Code Segments — What They Do**
+## **Executed Code Segments — What They Do - [ipynb files for segment1[Datasprint.ipynb] and segment2[Copy of statevector.ipynb] has been attached]** 
 
 ### **Segment 1 — Data & Features**
 
