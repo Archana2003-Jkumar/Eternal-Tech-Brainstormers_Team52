@@ -55,7 +55,7 @@ Efficient last‑mile logistics hinges on assigning the **right vehicle to the r
 
 ## **System Architecture (Block Diagram)**
 
-```mermaid
+```
 flowchart LR
     A[Raw Inputs] -->|Weather API| B(Weather Ingestion)
     A -->|OSM .osm| C(OSM Parsing via pyosmium)
@@ -218,58 +218,9 @@ This prototype demonstrates a **practical, extensible pipeline** for **dynamic f
 
 ---
 
-## **Repository Structure (Suggested)**
-
-```
-repo/
-├─ data/
-│  ├─ map.osm
-│  └─ synthetic_fleet_basic.csv
-├─ notebooks/
-│  └─ 01_feature_engineering.ipynb
-├─ src/
-│  ├─ ingest_weather.py
-│  ├─ osm_parse.py
-│  ├─ demand_sim.py
-│  ├─ build_state.py
-│  ├─ env_fleet_assignment.py
-│  └─ train_ppo.py
-├─ models/
-│  └─ fleet_assign_ppo.zip
-├─ README.md
-└─ LICENSE
-```
-
----
-
-## **README Snippet (for GitHub)**
-
-````markdown
-# AI Fleet Reallocation (Traffic + Weather + Demand)
-
-**Goal:** Dynamically assign fleet vehicles to requests using live traffic, weather, and demand data via RL (PPO).
-
-## Quickstart
-```bash
-pip install requests osmium pandas numpy gym==0.26.2 "shimmy>=2.0" stable-baselines3[extra]
-python src/train_ppo.py
-````
-
 ## Architecture
 
 * Weather (OpenWeather), OSM (pyosmium + Nominatim), Demand Simulator → Feature Engineering → RL Env → PPO Policy → Assignments.
 
-## Evaluate
-
-* Track **Average ETA**, **Feasibility Rate**, **Utilization**.
-
 ```
 
----
-
-## **Attributions**
-- OpenStreetMap® contributors.
-- OpenWeather.
-- Stable‑Baselines3, Gym.
-
-```
