@@ -17,4 +17,4 @@ Data Sources s APIs
 ·        Simulated demand datasets
 
 Prototype Goal
-·        Simulation showing optimal allocation for test cas
+·        Simulation showing optimal allocation for test case
